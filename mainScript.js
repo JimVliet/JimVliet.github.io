@@ -23,9 +23,15 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     }
     );
 
-    Q.Evented().on("step", function()
-    {
-        Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
-        console.log(Q.inputs['mouseX']);
-    });
+    Q.Evented().extend("MouseListener",
+        {
+            on: function(event,target,callback) {
+                if (event == "step")
+                {
+                    Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
+                    console.log(Q.inputs['mouseX']);
+                }
+            }
+        });
+
 });
