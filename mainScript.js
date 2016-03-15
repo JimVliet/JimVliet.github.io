@@ -16,7 +16,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     var mouseListener = new Q.mouseListener();
     mouseListener.on("step", function()
     {
-        Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
+        Q.stage().centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
         console.log(Q.inputs['mouseX']);
     });
 
@@ -24,7 +24,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     {
     	Q.stageTMX("BEGINMAP.tmx", stage);
     	stage.add("viewport");
-        Q.input.mouseControls();
+        stage.insert(mouseListener);
     }
     );
     //wat leuks
