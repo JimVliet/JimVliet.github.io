@@ -10,6 +10,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     Q.scene("test_01", function(stage)
     {
     	Q.stageTMX("BEGINMAP.tmx", stage);
+    	stage.centerOn(200, 800)
     }
     );
     //wat leuks
