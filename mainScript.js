@@ -13,6 +13,10 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
             this._super(p, {
                 asset: "TestingTile.png"  // By default images are stored in folder /images
             });
+        },
+        step: function(dt)
+        {
+            console.log(Q.stage());
         }
     });
 
