@@ -8,12 +8,6 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     
     Q.input.mouseControls();
 
-    Q.gameLoop(function(dt)
-    {
-        Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
-        console.log(Q.inputs['mouseX']);
-    });
-
     Q.scene("test_01", function(stage)
     {
     	Q.stageTMX("BEGINMAP.tmx", stage);
@@ -28,5 +22,11 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     	Q.stageScene("test_01");
     }
     );
+
+    Q.gameLoop(function(dt)
+    {
+        Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
+        console.log(Q.inputs['mouseX']);
+    });
 
 });
