@@ -8,6 +8,18 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     
     Q.input.mouseControls();
     //Edited at school
+    Q.Sprite.extend("eventListener",
+        {
+            init: function()
+            {
+                console.log("Created eventlistener");
+            },
+            step: function(dt)
+            {
+                Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
+                console.log(Q.inputs['mouseX']);
+            }
+        });
     Q.scene("test_01", function(stage)
     {
     	Q.stageTMX("BEGINMAP.tmx", stage);
@@ -23,16 +35,4 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     }
     );
 
-    Q.Sprite.extend("eventListener",
-        {
-            init: function()
-            {
-                console.log("Created eventlistener");
-            },
-            step: function(dt)
-            {
-                Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
-                console.log(Q.inputs['mouseX']);
-            }
-        });
 });
