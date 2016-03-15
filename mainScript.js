@@ -23,11 +23,11 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     }
     );
 
-    console.log(Q.stage());
+    console.log(Q.stage(0));
     Q.gameLoop(function(dt)
     {
-        Q.stage().centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
-        console.log(Q.inputs['mouseX']);
+        //Q.stage().centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
+        //console.log(Q.inputs['mouseX']);
     });
 
 });
