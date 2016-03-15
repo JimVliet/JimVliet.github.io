@@ -13,15 +13,11 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
             this._super(p, {
                 asset: "TestingTile.png"
             });
-            var x = 300;
-            var y = 0;
         },
         step: function(dt)
         {
             console.log("X: " + Q.inputs['mouseX'] + " Y: " + Q.inputs['mouseY']);
-            //Q.stage().centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
-            y = (y + 1)%1200
-            Q.stage().centerOn(x,y);
+            Q.stage().centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
         }
     });
 
