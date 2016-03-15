@@ -8,11 +8,19 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     
     Q.input.mouseControls();
 
+    Q.Sprite.extend("listener", {
+        init: function(p) {
+            this._super(p, {
+                asset: "TestingTile.png"  // By default images are stored in folder /images
+            });
+        }
+    });
+
     Q.scene("test_01", function(stage)
     {
     	Q.stageTMX("BEGINMAP.tmx", stage);
     	stage.add("viewport");
-
+        stage.insert(new Q.listener());
     }
     );
     //wat leuks
