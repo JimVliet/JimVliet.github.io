@@ -23,13 +23,9 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     }
     );
 
-    Q.component("eventListener",
+    Q.sprite.extend("eventListener",
         {
-            added: function()
-            {
-                this.entity.on('step', this, "step");
-            },
-            step: function()
+            step: function(dt)
             {
                 Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
                 console.log(Q.inputs['mouseX']);
