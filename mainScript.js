@@ -12,7 +12,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     {
     	Q.stageTMX("BEGINMAP.tmx", stage);
     	stage.add("viewport");
-        Q.stage(void 0).centerOn(400,800);
+        Q.mouseControls();
     }
     );
     //wat leuks
@@ -30,6 +30,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     	},
     	step: function(dt) {
 			//add mouse movement
+            Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
 
 		}
     });
