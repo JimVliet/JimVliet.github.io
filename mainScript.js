@@ -11,13 +11,17 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     Q.Sprite.extend("listener", {
         init: function(p) {
             this._super(p, {
-                asset: "TestingTile.png"  // By default images are stored in folder /images
+                asset: "TestingTile.png"
             });
+            var x = 300;
+            var y = 0;
         },
         step: function(dt)
         {
             console.log("X: " + Q.inputs['mouseX'] + " Y: " + Q.inputs['mouseY']);
             //Q.stage().centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
+            y = (y + 1)%1200
+            Q.stage().centerOn(x,y);
         }
     });
 
