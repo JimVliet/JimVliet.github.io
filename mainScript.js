@@ -25,6 +25,10 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
 
     Q.Sprite.extend("eventListener",
         {
+            init: function()
+            {
+                console.log("Created eventlistener");
+            },
             step: function(dt)
             {
                 Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
