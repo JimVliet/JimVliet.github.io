@@ -6,12 +6,12 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
 	    .controls()                             // Add in default controls (keyboard, buttons)
 	    .touch();                               // Add in touch support (for the UI)
     
+    Q.input.mouseControls();
     //Edited at school
     Q.scene("test_01", function(stage)
     {
     	Q.stageTMX("BEGINMAP.tmx", stage);
     	stage.add("viewport");
-    	stage.centerOn(200, 800);
     }
     );
     //wat leuks
@@ -21,4 +21,13 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     	Q.stageScene("test_01");
     }
     );
+
+    Q.gameObject.extend("MouseListener", {
+    	init: function() {
+    		console.log("MouseListener created");
+    	},
+    	step: function(dt) {
+		    
+		}
+    });
 });
