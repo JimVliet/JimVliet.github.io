@@ -12,7 +12,8 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     {
     	Q.stageTMX("BEGINMAP.tmx", stage);
     	stage.add("viewport");
-		console.log(Q.stages)
+		Q.stages.centerOn(400,800);
+
     }
     );
     //wat leuks
