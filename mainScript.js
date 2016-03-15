@@ -16,7 +16,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
         },
         step: function(dt)
         {
-            console.log(Q.stage());
+            Q.stage().centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
         }
     });
 
