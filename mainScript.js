@@ -7,23 +7,12 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
 	    .touch();                               // Add in touch support (for the UI)
     
     Q.input.mouseControls();
-    //Edited at school
-    Q.UI.Text.extend("Score",{
-        init: function(p) {
-            this._super({
-                label: "score: 0",
-                x: 0,
-                y: 0
-            });
 
-            Q.state.on("change.score",this,"score");
-        },
-
-        score: function(score) {
-            this.p.label = "score: " + score;
-        }
+    Q.gameLoop(function(dt)
+    {
+        Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
+        console.log(Q.inputs['mouseX']);
     });
-    Q.state.set("score",50);
 
     Q.scene("test_01", function(stage)
     {
