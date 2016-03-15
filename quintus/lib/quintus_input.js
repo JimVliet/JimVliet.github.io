@@ -551,7 +551,7 @@ Quintus.Input = function(Q) {
       var stageNum = options.stageNum || 0;
       var mouseInputX = options.mouseX || "mouseX";
       var mouseInputY = options.mouseY || "mouseY";
-      var cursor = options.cursor || "off";
+      var cursor = options.cursor || "on";
 
       var mouseMoveObj = {};
 
