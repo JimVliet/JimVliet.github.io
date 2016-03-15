@@ -23,7 +23,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     }
     );
 
-    Q.sprite.extend("eventListener",
+    Q.Sprite.extend("eventListener",
         {
             step: function(dt)
             {
