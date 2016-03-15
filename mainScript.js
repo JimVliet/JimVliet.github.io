@@ -25,7 +25,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
 
     Q.gameLoop(function(dt)
     {
-        Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
+        Q.stage().centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
         console.log(Q.inputs['mouseX']);
     });
 
