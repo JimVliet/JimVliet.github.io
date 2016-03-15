@@ -23,16 +23,17 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     }
     );
 
-    Q.Evented.extend("MouseListener",
+    Q.component("eventListener",
         {
-            on: function(event,target,callback) {
-                console.log(event);
-                if (event == "step")
-                {
-                    Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
-                    console.log(Q.inputs['mouseX']);
-                }
+            added: function()
+            {
+                this.entity.on('step', this, "step");
+            },
+            step: function()
+            {
+                Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
+                console.log(Q.inputs['mouseX']);
             }
-        });
+        })
 
 });
