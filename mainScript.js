@@ -26,6 +26,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     Q.Evented.extend("MouseListener",
         {
             on: function(event,target,callback) {
+                console.log(event);
                 if (event == "step")
                 {
                     Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
