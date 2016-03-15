@@ -23,7 +23,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     }
     );
 
-    Q.gameObject.extend("MouseListener", {
+	Q.GameObject.extend("MouseListener", {
     	init: function() {
     		console.log("MouseListener created");
     	},
