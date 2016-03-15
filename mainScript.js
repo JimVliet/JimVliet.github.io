@@ -23,7 +23,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     }
     );
 
-    Q.Evented().extend("MouseListener",
+    Q.Evented.extend("MouseListener",
         {
             on: function(event,target,callback) {
                 if (event == "step")
