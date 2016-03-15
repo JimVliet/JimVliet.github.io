@@ -23,7 +23,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     }
     );
 
-    var mouseListenerClass = new Q.Class.Evented();
+    var mouseListenerClass = new Q.Evented();
     mouseListenerClass.on("step", function()
     {
         Q.stage(void 0).centerOn(Q.inputs['mouseX'],Q.inputs['mouseY']);
