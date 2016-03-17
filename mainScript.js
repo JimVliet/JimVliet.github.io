@@ -28,7 +28,7 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
         stage.insert(new Q.listener());
     }
     );
-    //wat leuks
+    //Testing webstorm
 
     Q.loadTMX("BEGINMAP.tmx", function()
     {
