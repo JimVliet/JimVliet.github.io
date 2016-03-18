@@ -17,19 +17,22 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
 
     Q.input.mouseControls();
 
+    //TODO: Create player class which can move around
+
+    //Q.Sprite.extend("Player");
 
     Q.scene("test_01", function(stage)
     {
-    	Q.stageTMX("BEGINMAP.tmx", stage);
+    	Q.stageTMX("mijn2.tmx", stage);
     }
     );
-    //wat leuks
 
-    Q.loadTMX("BEGINMAP.tmx", function()
+    Q.loadTMX("mijn2.tmx", function()
     {
     	Q.stageScene("test_01");
     }
     );
+
 
 
 });
