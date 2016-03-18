@@ -23,11 +23,11 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
 
     Q.scene("test_01", function(stage)
     {
-    	Q.stageTMX("BEGINMAP2.tmx", stage);
+    	Q.stageTMX("mijn2.tmx", stage);
     }
     );
 
-    Q.loadTMX("BEGINMAP2.tmx", function()
+    Q.loadTMX("mijn2.tmx", function()
     {
     	Q.stageScene("test_01");
     }
