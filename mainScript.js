@@ -9,12 +9,12 @@ window.addEventListener("load",function() { // Wait for the window to finish loa
     //Edited at school
     Q.scene("test_01", function(stage)
     {
-    	Q.stageTMX("BEGINMAP.tmx", stage);
+    	Q.stageTMX("BEGINMAP2.tmx", stage);
     }
     );
     //wat leuks
 
-    Q.loadTMX("BEGINMAP.tmx", function()
+    Q.loadTMX("BEGINMAP2.tmx", function()
     {
     	Q.stageScene("test_01");
     }
